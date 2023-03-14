@@ -17,11 +17,11 @@ public class Circle extends Figure{
 
     @Override
     double calculateArea() {
-        return 0;
+        return this.pi*Math.pow(this.radius, 2.0);
     }
 
     @Override
     double calculatePerimeter() {
-        return 0;
+        return 2*this.pi*this.radius;
     }
 }
