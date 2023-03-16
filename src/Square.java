@@ -1,4 +1,4 @@
-public class Square extends Figure{
+public class Square extends Figure implements Printable{
     private double side;
 
     public Square(double side) {
@@ -24,4 +24,8 @@ public class Square extends Figure{
         return this.side*4;
     }
 
+    @Override
+    public void print() {
+        System.out.println("side = " + this.side +  ", area = " + this.calculateArea() + ", perimeter = " + this.calculatePerimeter());
+    }
 }

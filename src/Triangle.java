@@ -1,4 +1,4 @@
-public class Triangle extends Figure{
+public class Triangle extends Figure implements Printable{
     private double a, b, c;
 
     public Triangle(double a, double b, double c) {
@@ -20,5 +20,10 @@ public class Triangle extends Figure{
     @Override
     double calculatePerimeter() {
         return this.a+this.b+this.c;
+    }
+
+    @Override
+    public void print() {
+        System.out.println("side a = " + this.a + ", side b = " + this.b + ", side c = " + this.c + ", area = " + this.calculateArea() + ", perimeter = " + this.calculatePerimeter());
     }
 }
