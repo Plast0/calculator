@@ -2,6 +2,9 @@ public class Circle extends Figure implements Printable{
     private double pi = 3.14;
     private double radius;
 
+    public Circle() {
+    }
+
     public Circle(double radius) {
         this.radius = radius;
         double pi = 3.14;

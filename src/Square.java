@@ -1,6 +1,9 @@
 public class Square extends Figure implements Printable{
     private double side;
 
+    public Square() {
+    }
+
     public Square(double side) {
         this.side = side;
     }
