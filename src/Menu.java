@@ -59,26 +59,52 @@ public class Menu {
         }
     }
     void enterData(){
-        double myDouble;
+        double myDouble, myDoubleA, myDoubleB, myDoubleC;
         if (isTriangle) {
             System.out.println("Enter the sides of the triangle:");
-            this.triangle = new Triangle(in.nextDouble(), in.nextDouble(), in.nextDouble());
-            /*myDouble = in.nextDouble();
-            this.triangle.setA(myDouble);
-            myDouble = in.nextDouble();
-            this.triangle.setB(myDouble);
-            myDouble = in.nextDouble();
-            this.triangle.setC(myDouble);*/
+            myDoubleA = in.nextDouble();
+            myDoubleB= in.nextDouble();
+            myDoubleC = in.nextDouble();
+            try {
+                this.triangle = new Triangle(myDoubleA, myDoubleB, myDoubleC);
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+            /*System.out.println("Side A:");
+            myDoubleA = in.nextDouble();
+            while(myDoubleA > 0.0);
+            System.out.println("Side B:");
+                myDoubleB = in.nextDouble();
+            }
+            while(myDoubleB > 0.0);
+            do {
+                System.out.println("Side C:");
+                myDoubleC = in.nextDouble();
+            }
+            while(myDoubleC > 0.0);
+            this.triangle.setA(myDoubleA);
+            this.triangle.setB(myDoubleB);
+            this.triangle.setC(myDoubleC);*/
             isResult = true;
         }
         else if (isCircle ) {
             System.out.println("Enter the radius of the circle:");
-            this.circle = new Circle(in.nextDouble());
+            myDoubleA = in.nextDouble();
+            try {
+                this.circle = new Circle(myDoubleA);
+            } catch (Exception e) {
+                System.out.println(e);
+            }
             isResult = true;
         }
         else if (isSquare) {
             System.out.println("Enter the side of the square:");
-            this.square = new Square(in.nextDouble());
+            myDoubleA = in.nextDouble();
+            try {
+                this.square = new Square(myDoubleA);
+            } catch (Exception e) {
+                System.out.println(e);
+            }
             isResult = true;
         }
         else if (isPrism ) {
@@ -90,17 +116,32 @@ public class Menu {
             switch(n) {
                 case 1:
                     System.out.println("Enter the values for the triangle sides:");
-                    this.triangle = new Triangle(in.nextDouble(), in.nextDouble(), in.nextDouble());
+                    myDoubleA = in.nextDouble();
+                    try {
+                        this.triangle = new Triangle(myDoubleA,myDoubleA,myDoubleA);
+                    } catch (Exception e) {
+                        System.out.println(e);
+                    }
                     this.prism = new Prism(myDouble, triangle);
                     break;
                 case 2:
-                    System.out.println("Enter the value for the radius of the circle:");
-                    this.circle = new Circle(in.nextDouble());
+                    System.out.println("You can't make prism with circle as a base. Enter the value for the radius of the circle for cylinder:");
+                    myDoubleA = in.nextDouble();
+                    try {
+                        this.circle = new Circle(myDoubleA);
+                    } catch (Exception e) {
+                        System.out.println(e);
+                    }
                     this.prism = new Prism(myDouble, circle);
                     break;
                 case 3:
                     System.out.println("Enter the value for the side of the square:");
-                    this.square = new Square(in.nextDouble());
+                    myDoubleA = in.nextDouble();
+                    try {
+                        this.square = new Square(myDoubleA);
+                    } catch (Exception e) {
+                        System.out.println(e);
+                    }
                     this.prism = new Prism(myDouble, square);
                     break;
             }

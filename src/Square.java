@@ -1,10 +1,11 @@
 public class Square extends Figure implements Printable{
     private double side;
 
-    public Square() {
-    }
 
-    public Square(double side) {
+    public Square(double side) throws Exception {
+        if(!(side > 0.0) ) {
+            throw new Exception("Sides of the square has to be bigger than 0");
+        }
         this.side = side;
     }
 

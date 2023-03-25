@@ -1,13 +1,15 @@
 public class Triangle extends Figure implements Printable{
     private double a, b, c;
 
-    public Triangle() {
-    }
+    public Triangle(double a, double b, double c) throws Exception {
+        if(!( a+ b > c) && ( b + c > a)&& (c + a > b)) {
+            throw new Exception("This type of triangle doesn't exist.");
+        }
 
-    public Triangle(double a, double b, double c) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
+            this.a = a;
+            this.b = b;
+            this.c = c;
+
     }
 
     public double getA() {
