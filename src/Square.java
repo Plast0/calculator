@@ -9,14 +9,6 @@ public class Square extends Figure implements Printable{
         this.side = side;
     }
 
-    public double getSide() {
-        return side;
-    }
-
-    public void setSide(double side) {
-        this.side = side;
-    }
-
     @Override
     double calculateArea() {
         double area = this.side*this.side;

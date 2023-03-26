@@ -11,13 +11,6 @@ public class Circle extends Figure implements Printable{
         double pi = 3.14;
     }
 
-    public double getRadius() {
-        return radius;
-    }
-
-    public void setRadius(double radius) {
-        this.radius = radius;
-    }
 
     double diameter(){
         return this.radius*2;

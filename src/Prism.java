@@ -10,22 +10,6 @@ public class Prism extends Figure implements Printable{
         this.figure = figure;
     }
 
-    public double getHigh() {
-        return high;
-    }
-
-    public void setHigh(double high) {
-        this.high = high;
-    }
-
-    public Figure getFigure() {
-        return figure;
-    }
-
-    public void setFigure(Figure figure) {
-        this.figure = figure;
-    }
-
     @Override
     double calculateArea() {
         return this.figure.calculateArea()*high;

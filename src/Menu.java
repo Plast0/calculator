@@ -70,21 +70,6 @@ public class Menu {
             } catch (Exception e) {
                 System.out.println(e);
             }
-            /*System.out.println("Side A:");
-            myDoubleA = in.nextDouble();
-            while(myDoubleA > 0.0);
-            System.out.println("Side B:");
-                myDoubleB = in.nextDouble();
-            }
-            while(myDoubleB > 0.0);
-            do {
-                System.out.println("Side C:");
-                myDoubleC = in.nextDouble();
-            }
-            while(myDoubleC > 0.0);
-            this.triangle.setA(myDoubleA);
-            this.triangle.setB(myDoubleB);
-            this.triangle.setC(myDoubleC);*/
             isResult = true;
         }
         else if (isCircle ) {
@@ -154,7 +139,7 @@ public class Menu {
 
 
     void showData(){
-        //if(isTriangle == false && isCircle == false && isResult == false)
+
         if(isResult){
             if (isTriangle) {
                 triangle.print();
